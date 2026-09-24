@@ -71,10 +71,9 @@ The dataset consists of **4,995 transaction records** spanning 2025, structured 
 2. **Dimension Table Deduplication:** Fixed trailing blank rows in the `Geography` sheet by filtering out `null` regions and deduplicating on `City` (resulting in 36 clean unique cities).
 3. **Data Type Casting:** Converted currency strings (`$`), percentages (`%`), and integer strings into numeric `double` and `int64` types.
 4. **Financial Formula Recalculation:**
-   * $\text{Revenue} = \text{Quantity} \times \text{Unit\_Price} \times (1 - \text{Discount})$
-   * $\text{Profit} = \text{Revenue} - \text{Cost}$
-   * $\text{Profit Margin \%} = \frac{\text{Profit}}{\text{Revenue}}$
-
+   * **Revenue** = `Quantity * Unit_Price * (1 - Discount)`
+   * **Profit** = `Revenue - Cost`
+   * **Profit Margin** = `Profit / Revenue`
 ---
 
 ## 🛢️ SQL Analysis
